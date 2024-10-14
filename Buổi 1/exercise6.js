@@ -21,9 +21,11 @@ let arr = [
 ];
 
 let result = [];
+//khai báo branchCar là thuộc tính
 let brandCar = {};
 arr.forEach(item => {
     if (!brandCar[item.brand]) {
+        //chuyển branchCar thành mảng để có thể push;
         brandCar[item.brand] = [];
     } 
     brandCar[item.brand].push(item);
