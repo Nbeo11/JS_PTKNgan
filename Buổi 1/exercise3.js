@@ -5,12 +5,9 @@ function swapString(inputString) {
     let newString = "";
     for (let i = inputString.length - 1; i >= 0; i--) {
             newString += inputString[i];
-     
     }
-    return newString;
-    
+    return newString; 
 }
-
 
 console.log(swapString(inputString));
 

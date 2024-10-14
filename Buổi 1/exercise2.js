@@ -2,7 +2,6 @@ const prompt = require('prompt-sync')();
 const inputString = prompt('Vui lòng nhập mảng(các số cách nhau bằng dấu phẩy): ');
 const arr = inputString.split(',').map(Number)
 
-
 function increaseArray(arr) {
     for (let i = 0; i < arr.length; i++) {
         for (let j = i+1 ; j < arr.length; j++) {
@@ -13,8 +12,7 @@ function increaseArray(arr) {
             }
         }
     }
-    return arr;
-    
+    return arr; 
 }
 
 function decreaseArray(arr) {
@@ -29,8 +27,6 @@ function decreaseArray(arr) {
     }
     return arr;
 }
-
-
 
 console.log(increaseArray(arr));
 
