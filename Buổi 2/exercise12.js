@@ -5,9 +5,9 @@ const nums = [...nums1, ...nums2].sort();
 function medianNumber() {
     let num;
     if (nums.length%2 == 1) {
-        num = nums[(nums.length+1)/2]
+        num = nums[(nums.length-1)/2]
     } else {
-        num = (nums[nums.length/2] + nums[nums.length/2+1])/2
+        num = ((nums[nums.length/2-1] + nums[nums.length/2])/2)
     }
     return num;
 }

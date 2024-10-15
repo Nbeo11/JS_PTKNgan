@@ -1,3 +1,4 @@
+//closures function
 function parent() {
     let count = 0;
     return function child() {
@@ -6,8 +7,8 @@ function parent() {
     }
 }
  
-const a =parent();
+const a = parent();
 
 a();
 a();
-a()
+a();  
