@@ -19,6 +19,8 @@
             const ulNode = document.querySelector("ul");
             const liNode = document.querySelectorAll("li");
             let i = ulNode.childNodes.length
+            console.log(i)
+            console.log(ulNode.childNodes[3])
             while (i--) {
                 ulNode.appendChild(ulNode.childNodes[i])
             }

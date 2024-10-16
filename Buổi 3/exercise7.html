@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/exercise7.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3>Sign up</h3>
+        <div class="form">
+            <form>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+            </form>
+            <p id="usernameValid"></p>
+            <form>
+                <label for="password">Password</label>
+                <input type="text" id="password" name="password">
+            </form>
+            <p id="passwordValid"></p>
+            <form>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email">
+            </form>
+            <p id="emailValid"></p>
+            <form>
+                <label for="fullname">FullName</label>
+                <input type="text" id="fullname" name="fullname">
+            </form>
+            <p id="fullnameValid"></p>
+        </div>
+        <br>
+        <button onclick="clickSubmit()">Submit</button>
+    </div>
+
+    <script>
+        const formNode = document.getElementsByClassName("form")
+        console.log(formNode)
+        function usernameChecking() {
+            let usernameInput = document.getElementById("username").value;
+            if (usernameInput == "") {
+                let text = "vui long dien vao truong nay"
+                document.getElementById("usernameValid").innerHTML = text
+            } else if (usernameInput.length < 5 || usernameInput.length > 10) {
+                let text = "vui long tao 5-10 ki tu"
+                document.getElementById("usernameValid").innerHTML = text
+            } else {
+                document.getElementById("usernameValid").innerHTML = ""
+            }
+        }
+
+        function passwordChecking() {
+            let passwordInput = document.getElementById("password").value;
+            if (passwordInput == "") {
+                let text = "vui long dien vao truong nay"
+                document.getElementById("passwordValid").innerHTML = text
+            } else if (passwordInput.length < 5 || passwordInput.length > 10) {
+                let text = "vui long tao 5-10 ki tu"
+                document.getElementById("passwordValid").innerHTML = text
+            } else {
+                document.getElementById("passwordValid").innerHTML = ""
+            }
+        }
+
+        function emailChecking() {
+            let emailregex = new RegExp(/^[a-zA-Z0-9.!#$%&’+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:.[a-zA-Z0-9-]+)$/)
+            let emailInput = document.getElementById("email").value;
+            if (emailregex.test(emailInput)) {
+                console.log(emailInput)
+                document.getElementById("emailValid").innerHTML = ""
+            } else {
+                console.log("loi")
+                let text = "email khong hop le";
+                document.getElementById("emailValid").innerHTML = text
+            }
+        }
+
+        function clickSubmit() {
+            usernameChecking()
+            passwordChecking()
+            emailChecking()
+        }
+    </script>
+</body>
+
+</html>
