@@ -1,0 +1,29 @@
+.container {
+    max-width: 500px;
+    max-height: 100px;
+    position: relative;
+    margin: auto;
+}
+
+.image>img {
+    width: 100%;
+    height: auto;
+}
+
+.image {
+    display: flex;
+    overflow: hidden;
+}
+
+
+.button-right {
+    position: absolute;
+    right: 0;
+    top: 140px;
+}
+
+.button-left {
+    position: absolute;
+    left: 0;
+    top: 140px;
+}
