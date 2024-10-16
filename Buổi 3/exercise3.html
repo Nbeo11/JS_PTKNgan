@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <button onclick="onclickChange()">Change</button>
+    <script>
+        function onclickChange() {
+            const ulNode = document.querySelector("ul");
+            const liNode = document.querySelectorAll("li");
+            const i = ulNode.childNodes.length
+            console.log(liNode[1])
+            while (i--) {
+                ulNode.appendChild(ulNode.childNodes[i])
+            }
+        }
+    </script>
+</body>
+</html>
