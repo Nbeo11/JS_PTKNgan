@@ -2,18 +2,27 @@
     display: flex;
     flex-direction: column;
     max-width: 500px;
-    margin: 0 auto;
+    margin: 50px auto;
+    gap: 10px;
 }
-.content > img {
-    width: 500px;
+
+.content>img {
+    width: 496px;
     height: 350px;
+    border: 2px solid rgb(181, 181, 181);
 }
+
 .image {
     display: flex;
-    gap: 30px;
+    gap: 10px;
     justify-content: space-between;
 }
 
-.image > img {
-    width: 50px;
+.image>img {
+    width: 70px;
+    border: 2px solid rgb(181, 181, 181);
+}
+
+.image>img:hover {
+    cursor: pointer;
 }

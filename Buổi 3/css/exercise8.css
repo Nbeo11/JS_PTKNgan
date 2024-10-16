@@ -2,12 +2,13 @@
     max-width: 500px;
     max-height: 100px;
     position: relative;
-    margin: auto;
+    margin: 50px auto;
 }
 
 .image>img {
     width: 100%;
     height: auto;
+    border: 2px solid rgb(181, 181, 181);
 }
 
 .image {
@@ -17,13 +18,21 @@
 
 
 .button-right {
+    background-color: rgb(232, 232, 232);
     position: absolute;
     right: 0;
     top: 140px;
+    border: 1px solid gray;
 }
 
 .button-left {
+    background-color:  rgb(232, 232, 232);
     position: absolute;
     left: 0;
     top: 140px;
+    border: 1px solid gray;
+}
+
+.button-left, .button-right:hover {
+    cursor: pointer;
 }
