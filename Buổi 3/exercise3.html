@@ -18,8 +18,7 @@
         function onclickChange() {
             const ulNode = document.querySelector("ul");
             const liNode = document.querySelectorAll("li");
-            const i = ulNode.childNodes.length
-            console.log(liNode[1])
+            let i = ulNode.childNodes.length
             while (i--) {
                 ulNode.appendChild(ulNode.childNodes[i])
             }
