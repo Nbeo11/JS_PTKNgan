@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/exercise7.css">
+</head>
+
+<body>
+    <div class="container">
+        <h3>Sign up</h3>
+        <div class="form">
+            <form id="signupForm">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username">
+                <p id="usernameValid"></p>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <p id="passwordValid"></p>
+
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email">
+                <p id="emailValid"></p>
+
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname">
+                <p id="fullnameValid"></p>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            let isUsernameValid = usernameChecking();
+            let isPasswordValid = passwordChecking();
+            let isEmailValid = emailChecking();
+            let isFullnameValid = fullnameChecking();
+
+            if (isUsernameValid && isPasswordValid && isEmailValid && isFullnameValid) {
+                alert("Form submitted successfully!");
+            } else {
+                alert("Vui lòng kiểm tra lại thông tin");
+            }
+        });
+
+        function usernameChecking() {
+            let usernameInput = document.getElementById("username").value;
+            if (usernameInput === "") {
+                document.getElementById("usernameValid").innerHTML = "Vui lòng điền vào trường này";
+                return false;
+            } else if (usernameInput.length < 5 || usernameInput.length > 10) {
+                document.getElementById("usernameValid").innerHTML = "Vui lòng tạo 5-10 ký tự";
+                return false;
+            } else {
+                document.getElementById("usernameValid").innerHTML = "";
+                return true;
+            }
+        }
+
+        function passwordChecking() {
+            let passwordInput = document.getElementById("password").value;
+            if (passwordInput === "") {
+                document.getElementById("passwordValid").innerHTML = "Vui lòng điền vào trường này";
+                return false;
+            } else if (passwordInput.length < 5 || passwordInput.length > 10) {
+                document.getElementById("passwordValid").innerHTML = "Vui lòng tạo 5-10 ký tự";
+                return false;
+            } else {
+                document.getElementById("passwordValid").innerHTML = "";
+                return true;
+            }
+        }
+
+        function emailChecking() {
+            let emailregex = /^[a-zA-Z0-9.!#$%&’+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
+            let emailInput = document.getElementById("email").value;
+            if (emailregex.test(emailInput)) {
+                document.getElementById("emailValid").innerHTML = "";
+                return true;
+            } else {
+                document.getElementById("emailValid").innerHTML = "Email không hợp lệ";
+                return false;
+            }
+        }
+
+        function fullnameChecking() {
+            let fullnameInput = document.getElementById("fullname").value;
+            if (fullnameInput === "") {
+                document.getElementById("fullnameValid").innerHTML = "Vui lòng điền vào trường này";
+                return false;
+            } else {
+                document.getElementById("fullnameValid").innerHTML = "";
+                return true;
+            }
+        }
+    </script>
+</body>
+
+</html>

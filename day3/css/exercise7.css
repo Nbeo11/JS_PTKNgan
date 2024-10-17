@@ -1,0 +1,70 @@
+/* Center the container and add a border */
+.container {
+    margin: 0 auto;
+    width: 400px; /* Giảm kích thước cho cân đối hơn */
+    border: 1px solid #ccc; /* Mềm hơn với màu xám nhạt */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px; /* Tăng padding để tạo khoảng cách */
+    border-radius: 8px; /* Làm mềm góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Thêm bóng để nổi bật */
+}
+
+/* Form section */
+.form {
+    width: 100%;
+}
+
+/* Style each form row */
+div > form {
+    display: flex;
+    flex-direction: column; /* Thay đổi thành dạng cột */
+    margin-bottom: 15px; /* Thêm khoảng cách giữa các form */
+}
+
+label {
+    margin-bottom: 5px; /* Thêm khoảng cách giữa label và input */
+    font-weight: bold; /* In đậm label */
+    font-size: 14px; /* Điều chỉnh kích thước chữ */
+}
+
+input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box; /* Đảm bảo padding không vượt quá chiều rộng */
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #007bff; /* Đổi màu viền khi được chọn */
+    outline: none; /* Loại bỏ viền mặc định */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Thêm bóng đổ khi focus */
+}
+
+/* Style for the submit button */
+button {
+    width: 100px;
+    padding: 8px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease; /* Thêm hiệu ứng chuyển khi hover */
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #0056b3; /* Thay đổi màu khi hover */
+}
+
+/* Style for error messages */
+p {
+    color: red;
+    font-size: 12px; /* Điều chỉnh kích thước chữ */
+    margin-top: 5px;
+    margin-bottom: 0;
+}
